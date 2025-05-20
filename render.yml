@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: inventario-backend
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    dockerContext: ./recursos/backend
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        value: s3cret-llave-cali-fino
+      - key: DEBUG
+        value: true
+      - key: POSTGRES_DB
+        value: postgres
+      - key: POSTGRES_USER
+        value: postgres
+      - key: POSTGRES_PASSWORD
+        value: sena2025
+      - key: POSTGRES_HOST
+        value: db
+      - key: POSTGRES_PORT
+        value: 5433
